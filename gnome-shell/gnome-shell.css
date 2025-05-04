@@ -1,0 +1,648 @@
+/* --- FORZAR MODO OSCURO SHELL --- */
+.screenshot-ui { background-color: #101010 !important; }
+
+stage, .popup-menu, .calendar, .message-list, .notification-banner, .modal-dialog, .app-menu, .panel {
+    background-color: #1e1e1e !important;
+    color: #363232 !important;
+  }
+  
+  StLabel, StEntry, StButton, StIcon, StBoxLayout, StScrollView, StWidget {
+    color: #668dc9 !important;
+  }
+  
+  #panel {
+    background-color: rgba(8, 10, 20, 0.95);
+    height: 36px;
+    font-family: monospace;
+    font-size: 13px;
+    border-bottom: 2px solid rgba(0, 200, 255, 0.4);
+  }
+  
+  .panel-button {
+    background-color: rgba(0, 200, 255, 0.1);
+    border: 1px solid rgba(0, 200, 255, 0.4);
+    border-radius: 4px;
+    padding: 2px 8px;
+    margin: 2px;
+    color: #668dc9;
+  }
+  
+  .panel-button:hover {
+    background-color: rgba(0, 200, 255, 0.2);
+    border-color: rgba(5, 9, 10, 0.6);
+  }
+  
+  #panel .power-status.panel-status-indicators-box {
+    font-family: monospace;
+    font-size: 12px;
+    color: #102222;
+  }
+  
+  /* CONTENEDORES: FONDO OSCURO Y TEXTO CLARO */
+  .message-list,
+  .calendar,
+  .datemenu-calendar,
+  .datemenu-today-button,
+  .datemenu-today-label,
+  #calendarArea,
+  #calendar {
+    background-color: transparent !important;
+    color: #4b4c4d !important;
+    border-color: #333 !important;
+  }
+  
+  /* Fondo transparente al grupo de notificaciones */
+  .message-list {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  /* Notificaciones individuales estilo "fecha actual" */
+  .message-list .notification {
+    background-color: #0e0e0e !important;
+    color: #668dc9 !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6), inset 0 -1px 2px rgba(255, 0, 0, 0.1) !important;
+    border: 1px solid rgba(255, 0, 0, 0.1) !important;
+    margin: 6px 8px !important;
+    padding: 10px 12px !important;
+  }
+  
+  /* Contenido de notificaciones */
+  .message-list .notification .content,
+  .message-list .notification .summary,
+  .message-list .notification .body,
+  .message-list .notification .time {
+    color: #668dc9 !important;
+    padding: 0 4px !important;
+  }
+  
+  /* Otros elementos flotantes */
+  .notification-banner,
+  .calendar {
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+  
+  /* Botón de no molestar y "Clear" */
+  .toggle-switch,
+  .button,
+  .datemenu-today-button,
+  .notification .close-button {
+    background-color: rgba(241, 238, 238, 0.15) !important;
+    border: 1px solid transparent !important;
+    color: #e0d4d4 !important;
+  }
+  
+  /* Redondeado general de elementos emergentes */
+  .calendar,
+  .datemenu-calendar,
+  .datemenu-today-button,
+  .popup-menu,
+  .notification-banner,
+  .modal-dialog,
+  .app-menu {
+    border: none !important;
+    border-radius: 16px !important;
+    background-color: #1a1a1a !important;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5) !important;
+    padding: 6px !important;
+  }
+  
+  /* Eliminar rectángulo del toggle switch */
+  .toggle-switch {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  
+  /* Colores del texto para claridad */
+  .datemenu-today-button,
+  .datemenu-today-label {
+    color: #e0e0e0 !important;
+  }
+  
+  .clear-button,
+  .calendar {
+    background-color: transparent !important;
+    border: none !important;
+  }
+  
+  /* Limpiar contornos visuales */
+  .ui-box-menu,
+  .calendar-popup,
+  .aggregate-menu,
+  .popup-menu-boxpointer {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background-color: transparent !important;
+  }
+/* ⛔ Quitar difuminado/fondo transparente del calendario */
+.calendar,
+#calendarArea,
+.datemenu-calendar,
+.datemenu-today-button,
+.datemenu-today-label {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  background: #0e0e0e !important;
+  background-color: #0e0e0e !important;
+  box-shadow: none !important;
+  color: #668dc9 !important;
+  border: none !important;
+}
+
+/* 🔒 Eliminar translucidez */
+.background {
+  background-color: #0e0e0e !important;
+  opacity: 1 !important;
+}
+/* 🔧 Corregir fondo blanco residual en subcomponentes de notificaciones */
+.message-list .notification,
+.message-list .notification .content,
+.message-list .notification .summary,
+.message-list .notification .body,
+.message-list .notification .time,
+.message-list .notification .buttons,
+.message-list .notification .close-button {
+  background-color: #0e0e0e !important;
+  color: #668dc9 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+/* 🔥 Fuerza total sobre fondos internos de notificación */
+.notification,
+.notification .message,
+.notification .message-body,
+.notification-box,
+.notification-content,
+.message-list .notification .notification-content {
+  background-color: #0e0e0e !important;
+  color: #d6668dc0 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+/* 🛡️ Selector ultraespecífico para eliminar fondo blanco en notificaciones */
+.message-list .notification {
+    background-color: #0e0e0e !important;
+    color: #668dc9 !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6), inset 0 -1px 2px rgba(255, 0, 0, 0.1) !important;
+    border: 1px solid rgba(255, 0, 0, 0.1) !important;
+    margin: 6px 8px !important;
+    padding: 10px 12px !important;
+  }
+  
+  /* SOLO elementos internos: transparentes, sin sobrescribir el fondo externo */
+  .message-list .notification .notification-content,
+  .message-list .notification .body,
+  .message-list .notification .summary,
+  .message-list .notification .time,
+  .message-list .notification .buttons,
+  .message-list .notification .close-button {
+    background-color: transparent !important;
+    color: #668dc9 !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+/* 🌓 Estilo oscuro para acciones del panel de configuración */
+.system-menu-action {
+    background-color: #0e0e0e !important;
+    color: #668dc9 !important;
+    border-radius: 12px !important;
+    padding: 10px 14px !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    transition: background-color 0.2s ease;
+  }
+  
+  .system-menu-action:hover,
+  .system-menu-action:focus {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    color: #504c4c !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  }
+  
+  .system-menu-action:active {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: #504e4e !important;
+  }
+  
+  /* 🧩 Íconos del menú */
+  .system-menu-action > StIcon,
+  .popup-menu-icon {
+    color: #668dc9 !important;
+  }
+/* 🌑 Forzar fondo oscuro en menú de configuración */
+.popup-menu {
+    background-color: #0e0e0e !important;
+    border-radius: 12px !important;
+    color: #1a2433 !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6) !important;
+  }
+  
+  /* 🔧 Estilos oscuros para ítems del panel */
+  .popup-menu-item,
+  .popup-sub-menu,
+  .popup-inactive-menu-item,
+  .popup-separator-menu-item {
+    background-color: transparent !important;
+    color: #668dc9 !important;
+    border-radius: 8px !important;
+    padding: 6px 12px !important;
+  }
+  
+  /* 🔁 Interacción visual */
+  .popup-menu-item:hover,
+  .popup-menu-item:focus,
+  .popup-sub-menu:hover,
+  .popup-sub-menu:focus {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: #424040 !important;
+  }
+  
+
+/* 🌒 Fondo oscuro del panel emergente de configuración */
+.popup-menu,
+.popup-menu-boxpointer,
+.system-menu,
+.aggregate-menu,
+.aggregate-menu .popup-menu {
+  background-color: #0e0e0e !important;
+  color: #668dc9 !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* 🎛️ Elementos internos del menú */
+.popup-menu-item,
+.popup-sub-menu,
+.popup-inactive-menu-item {
+  background-color: transparent !important;
+  color: #668dc9 !important;
+  border-radius: 6px !important;
+  padding: 6px 10px !important;
+}
+
+/* 🖱️ Hover y foco */
+.popup-menu-item:hover,
+.popup-menu-item:focus {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+}
+
+/* 🔧 Contenedores internos */
+StScrollView,
+StBoxLayout,
+.popup-menu-content {
+  background-color: transparent !important;
+  color: #668dc9 !important;
+  border: none !important;
+}
+/* 🌐 Color global unificado del texto visible */
+stage,
+.popup-menu,
+.calendar,
+.message-list,
+.notification-banner,
+.modal-dialog,
+.app-menu,
+.panel,
+.notification,
+.system-menu,
+.aggregate-menu,
+.popup-menu-item,
+.datemenu-today-label,
+.datemenu-today-button,
+.system-menu-action,
+StLabel,
+StEntry,
+StButton,
+StIcon,
+StBoxLayout,
+StScrollView,
+StWidget,
+StText,
+StBin,
+StTable {
+  color: #00f2ff !important;
+}
+
+/* ⬛ También para texto interno en notificaciones */
+.message-list .notification .content,
+.message-list .notification .summary,
+.message-list .notification .body,
+.message-list .notification .time,
+.message-list .notification .buttons,
+.message-list .notification .close-button {
+  color: #00f2ff !important;
+}
+/* 🕶️ Fondo oscuro para notificaciones individuales */
+.message-list .notification,
+.notification {
+  background-color: #101010 !important;
+  border-radius: 16px !important;
+  border: 1px solid rgba(0, 242, 255, 0.2) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6), inset 0 -1px 2px rgba(0, 242, 255, 0.1) !important;
+  padding: 10px 12px !important;
+  margin: 6px 8px !important;
+}
+
+/* 🌌 Fondo oscuro absoluto para notificaciones */
+.message-list .notification,
+.message-list .notification * {
+  background-color: #101010 !important;
+  color: #00f2ff !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* 💡 Contenedor visual principal */
+.notification,
+.notification-box,
+.notification-content,
+.notification .message,
+.notification .message-body {
+  background-color: #101010 !important;
+  color: #00f2ff !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* ✅ Reforzar fondo oscuro para todos los tipos de notificación, incluidas multimedia */
+.message-list .notification,
+.message-list .notification * {
+  background-color: #101010 !important;
+  color: #00f2ff !important;
+}
+
+/* ✅ Especialmente para las notificaciones de música / multimedia */
+.message-list .notification.media-control,
+.message-list .notification.media-control * {
+  background-color: #101010 !important;
+  color: #00f2ff !important;
+}
+
+/* ✅ Evitar sobrescritura por partes de gnome-shell que inyectan inline style */
+.message-list .notification > *:not(.close-button) {
+  background-color: #101010 !important;
+  color: #00f2ff !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Fondo para notificaciones emergentes */
+.notification-banner {
+    background-color: #1a1a1a !important;
+    border: 1px solid #444 !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5) !important;
+  }
+  
+  .notification-banner:hover {
+    background-color: #202020 !important;
+  }
+  
+  .notification-banner:active {
+    background-color: #252525 !important;
+  }
+  
+  /* Fondo para notificaciones del historial */
+  .message-list .notification,
+  .notification,
+  .message {
+    background-color: #1a1a1a !important;
+    color: #00f2ff !important;
+    border: 1px solid rgba(0, 242, 255, 0.1) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6) !important;
+    padding: 10px 12px !important;
+  }
+/* 🎯 Estilo oscuro para el botón de eventos del calendario (Today / No Events) */
+.datemenu-today-button {
+    background-color: #1a1a1a !important;
+    color: #00f2ff !important;
+    border-radius: 12px !important;
+    border: 1px solid rgba(0, 242, 255, 0.1) !important;
+    padding: 8px 10px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+  }
+  
+  .datemenu-today-button:hover {
+    background-color: #202020 !important;
+  }
+/* 🎯 Estilo oscuro para el botón de eventos del calendario (Today / No Events) */
+.datemenu-today-button {
+    background-color: #1a1a1a !important;
+    color: #00f2ff !important;
+    border-radius: 12px !important;
+    border: 1px solid rgba(0, 242, 255, 0.1) !important;
+    padding: 8px 10px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+  }
+  
+  .datemenu-today-button:hover {
+    background-color: #202020 !important;
+  }
+/* 🗓️ Fondo oscuro para el área de eventos debajo del calendario */
+#calendarEventsArea,
+.datemenu-calendar .datemenu-today-button {
+  background-color: #101010 !important;
+  color: #00f2ff !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(0, 242, 255, 0.1) !important;
+  padding: 10px 14px !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4) !important;
+}
+/* 🌙 Fondo oscuro y color cian para el botón "Today / No Events" */
+.datemenu-calendar .calendar-button,
+.datemenu-calendar .calendar-button:hover,
+.datemenu-calendar .calendar-button:focus,
+.datemenu-calendar .calendar-button:active {
+  background-color: #101010 !important;
+  color: #00f2ff !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(0, 242, 255, 0.15) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4) !important;
+}
+/* 🛠️ Estilo oscuro para el botón "Today / No Events" */
+.datemenu-today-button,
+.datemenu-today-button:hover,
+.datemenu-today-button:focus,
+.datemenu-today-button:active {
+  background-color: #101010 !important;
+  color: #00f2ff !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(0, 242, 255, 0.2) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5) !important;
+}
+.datemenu-today .button,
+.datemenu-today .button:hover {
+  background-color: #101010 !important;
+  color: #00f2ff !important;
+  border-radius: 12px !important;
+  border: none !important;
+}
+.datemenu-today > StButton {
+    background-color: #101010 !important;
+    color: #00f2ff !important;
+    border-radius: 12px !important;
+    border: 1px solid rgba(0, 242, 255, 0.2) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5) !important;
+    padding: 10px 12px !important;
+  }
+  .datemenu-today > StButton > StBoxLayout,
+  .datemenu-today > StButton > StBoxLayout > StLabel {
+    background-color: transparent !important;
+    color: #00f2ff !important;
+  }
+  .events-button {
+    background-color: #101010 !important;
+    color: #00f2ff !important;
+    border-radius: 12px !important;
+    padding: 10px 12px !important;
+    margin: 6px 8px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5) !important;
+    border: 1px solid rgba(0, 242, 255, 0.2) !important;
+  }
+  
+  .events-button:hover {
+    background-color: #181818 !important;
+  }
+/* 🧱 Redondear fondo contenedor de notificaciones */
+.message-list {
+    background-color: transparent !important;
+    border-radius: 16px !important;
+    padding: 8px !important;
+    margin: 8px !important;
+    box-shadow: none !important;
+  }
+  
+/* 🧱 Contenedor general de cada notificación */
+.notification-container {
+background-color: transparent !important;
+border-radius: 16px !important;
+overflow: hidden !important;
+}
+.message-list .notification-container,
+.message-list .notification-container * {
+border-radius: 16px !important;
+background-clip: padding-box !important;
+}
+/* 🚫 Eliminar transparencia y desenfoque en notificaciones OSD */
+.osd-window,
+.osd-window .osd-box,
+.osd-window .osd-label,
+.volume-osd,
+.screenshot-ui {
+    background-color: #101010 !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+.screenshot-ui * {
+background-color: transparent !important;
+color: #00f2ff !important;
+}
+    
+
+/* 🔍 Opcional: también eliminar fondos transparentes en overlays */
+.screenshot-window,
+.screenshot-window * {
+  background-color: #101010 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  opacity: 1 !important;
+  border-radius: 12px !important;
+  border: none !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5) !important;
+}
+/* 🖼️ Eliminar translucidez y difuminado de la UI de captura de pantalla */
+.screenshot-ui,
+.screenshot-ui .controls,
+.screenshot-ui .actions,
+.screenshot-ui .source,
+.screenshot-ui .thumbnail,
+.screenshot-ui .toggle,
+.screenshot-ui .button,
+.screenshot-ui .selection-indicator,
+.screenshot-ui .window-picker,
+.screenshot-ui * {
+  background-color: #101010 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  opacity: 1 !important;
+  box-shadow: none !important;
+  border-radius: 12px !important;
+  border: none !important;
+  color: #00f2ff !important;
+}
+#searchEntry,
+#searchEntry StEntry,
+#searchEntry StEntry > .entry {
+  color: #000000 !important; /* Texto negro */
+  caret-color: #000000 !important; /* Cursor negro */
+}
+
+#searchEntry .placeholder-text {
+  color: #444444 !important; /* Texto de sugerencia gris oscuro */
+}
+#searchEntry,
+#searchEntry StEntry,
+#searchEntry StEntry .entry,
+#searchEntry .entry,
+#searchEntry * {
+  color: #000000 !important;          /* Texto negro */
+  caret-color: #000000 !important;    /* Cursor negro */
+  text-shadow: none !important;
+}
+
+/* Por esto: (excluyendo searchEntry) */
+StEntry:not(#searchEntry) *,
+StLabel,
+StText {
+  color: #00f2ff !important;
+}
+
+#searchEntry .entry::placeholder {
+    color: #888888 !important;
+  }
+  
+/* Esto excluye el campo de búsqueda */
+StEntry:not(#searchEntry) *,
+StLabel,
+StText {
+  color: #00f2ff !important;
+}
+
+
+/* --- PARCHE FINAL PARA OVERVIEW --- */
+.search-entry,
+.search-entry:focus,
+.search-entry:active {
+    color: black !important;
+    background-color: #f0f0f0 !important;
+    caret-color: black !important;
+}
+
+.search-entry .entry-placeholder,
+.search-entry .placeholder-text,
+.search-entry .clear-entry,
+.search-entry StIcon {
+    color: black !important;
+    icon-shadow: none !important;
+    text-shadow: none !important;
+}
+
+
+/* --- REPARAR ESTILO DE BOTONES EN DIALOGOS (apagado, reinicio...) --- */
+.modal-dialog StButton {
+    background-color: #222 !important;
+    color: #66d9ef !important;
+    border: 1px solid #444 !important;
+}
