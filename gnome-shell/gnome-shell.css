@@ -11,12 +11,14 @@ stage, .popup-menu, .calendar, .message-list, .notification-banner, .modal-dialo
   }
   
   #panel {
-    background-color: rgba(8, 10, 20, 0.95);
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
     height: 36px;
     font-family: monospace;
     font-size: 13px;
-    border-bottom: 2px solid rgba(0, 200, 255, 0.4);
   }
+
   
   .panel-button {
     background-color: rgba(0, 200, 255, 0.1);
